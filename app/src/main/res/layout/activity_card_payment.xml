@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Back"
+        android:onClick="onBackPressed"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <!-- Card Payment Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_white_bg"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:elevation="6dp">
+
+        <!-- Total Amount Text -->
+        <TextView
+            android:id="@+id/totalAmountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount: Rs 0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingBottom="12dp" />
+
+        <!-- Card Number Input -->
+        <EditText
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:background="@drawable/rounded_input"
+            android:layout_marginBottom="10dp"
+            android:padding="12dp"
+            android:textSize="16sp"/>
+
+        <!-- Expiry Date & CVV in one row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/expiryDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Expiry Date (MM/YY)"
+                android:inputType="datetime"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/cvv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="CVV"
+                android:inputType="numberPassword"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Cardholder Name -->
+        <EditText
+            android:id="@+id/cardHolderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cardholder Name"
+            android:inputType="text"
+            android:background="@drawable/rounded_input"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"
+            android:textSize="16sp"/>
+
+        <!-- Pay Now Button -->
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Now"
+            android:background="@drawable/rounded_green_button"
+            app:backgroundTint="@null"
+            android:backgroundTint="@null"
+            android:textColor="@color/white"
+            android:padding="14dp"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:elevation="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>

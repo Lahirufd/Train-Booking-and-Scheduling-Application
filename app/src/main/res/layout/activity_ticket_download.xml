@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Ticket Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_white_bg"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:elevation="6dp">
+
+        <!-- Ticket Image -->
+        <ImageView
+            android:id="@+id/ticketImage"
+            android:src="@drawable/passenger"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="Ticket Image"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_image_bg"
+            android:padding="4dp"/>
+
+        <!-- Payment Status -->
+        <TextView
+            android:id="@+id/textPaymentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ Payment Successful!"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Download Prompt -->
+        <TextView
+            android:id="@+id/textDownloadPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Download your ticket"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            android:layout_marginVertical="10dp"/>
+
+        <!-- Ticket Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- From Station -->
+            <TextView
+                android:id="@+id/textFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From: "
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingVertical="4dp"/>
+
+            <!-- To Station -->
+            <TextView
+                android:id="@+id/textTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To: "
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingVertical="4dp"/>
+
+            <!-- Passenger Count -->
+            <TextView
+                android:id="@+id/textPassengerCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passengers: "
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingVertical="4dp"/>
+
+            <!-- Total Amount -->
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Amount: "
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingVertical="4dp"/>
+        </LinearLayout>
+
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Download Ticket Button -->
+            <Button
+                android:id="@+id/downloadTicketButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📥 Download Ticket"
+                android:background="@drawable/rounded_green_button"
+                app:backgroundTint="@null"
+                android:backgroundTint="@null"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Back to Home Button -->
+            <Button
+                android:id="@+id/backToHomeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏠 Back to Home"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:elevation="4dp"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

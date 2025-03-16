@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/card_background"
+    android:layout_marginBottom="8dp">
+
+    <!-- Container for Train Name and Number -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/trainName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Train Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/trainNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Train Number"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+    </LinearLayout>
+
+    <!-- Container for Departure and Arrival Times -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/trainDeparture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departure Time"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/trainArrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arrival Time"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/trainDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date: YYYY-MM-DD"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="12dp" />
+
+</LinearLayout>

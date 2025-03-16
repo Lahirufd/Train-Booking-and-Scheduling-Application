@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Banner Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/train_schedule_banner"
+            android:scaleType="centerCrop"
+            android:contentDescription="Train Schedule Banner"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Train Schedules"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Paragraph -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plan your journey by exploring train schedules. Enter your start station, end station, and travel date to find the best trains for your trip."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Search Form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/startStationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_background"
+                android:padding="8dp"
+                android:spinnerMode="dropdown"
+                android:prompt="@string/select_start_station" />
+
+            <Spinner
+                android:id="@+id/endStationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edittext_background"
+                android:padding="8dp"
+                android:spinnerMode="dropdown"
+                android:prompt="@string/select_end_station" />
+
+            <Button
+                android:id="@+id/travelDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date (YYYY-MM-DD)"
+                android:padding="8dp"
+                android:background="@drawable/edittext_background"
+                app:backgroundTint="@null"
+                android:backgroundTint="@null"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Search Trains"
+                android:textColor="@color/white"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_button"
+                app:backgroundTint="@null"
+                android:backgroundTint="@null"/>
+        </LinearLayout>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Back"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_back_button"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
+
+        <!-- Additional Instructions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip: Ensure the station names and date are accurate to get the best results."
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center" />
+    </LinearLayout>
+</ScrollView>

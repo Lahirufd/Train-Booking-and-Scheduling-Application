@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Train_Booking_Scheduling_App</string>
+    <string name="select_start_station">Select Start Station</string>
+    <string name="select_end_station">Select End Station</string>
+</resources>
